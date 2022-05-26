@@ -1,0 +1,32 @@
+{
+  "name": "skprods/advanced-laravel",
+  "description": "Advanced features for Laravel framework",
+  "keywords": ["skprods", "laravel", "helpers"],
+  "homepage": "https://github.com/skprods/advanced-laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pavel Sklyar",
+      "email": "ozpavel@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "illuminate/support": "^7|^8|^9"
+  },
+  "require-dev": {
+    "laravel/framework": "^7|^8|^9",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "SKprods\\AdvancedLaravel\\": "src"
+    }
+  },
+  "scripts": {
+    "app:cs": [
+      "phpcs --standard=PSR12 --encoding=utf-8 -p src -p config"
+    ]
+  },
+  "minimum-stability": "dev"
+}
