@@ -49,7 +49,7 @@ class Filesystem
         while (($file = readdir($directory)) !== false) {
             if ($file != '.' && $file != '..') {
                 if (is_dir($sourceDir . '/' . $file)) {
-                    self::copyDirectory($sourceDir . '/' . $file, $destinationDir . '/'. $file);
+                    self::copyDirectory($sourceDir . '/' . $file, $destinationDir . '/' . $file);
                 } else {
                     copy($sourceDir . '/' . $file, $destinationDir . '/' . $file);
                 }

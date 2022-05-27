@@ -5,30 +5,31 @@ namespace SKprods\AdvancedLaravel;
 class Path
 {
     /**
-     * Converting path to a format path/to/file
+     * Преобразование пути к формату path/to/file
      */
     public static function prepareFile(string $path): string
     {
-        if (str_starts_with($path, "/")) {
-            $path = substr($path, 1);
-        }
-
-        return $path;
+        return self::prepare($path, false);
     }
 
     /**
-     * Converting path to a format path/to/directory/
+     * Преобразование пути к формату path/to/directory/
      */
     public static function prepareDirectory(string $path): string
+    {
+        return self::prepare($path, true);
+    }
+
+    private static function prepare(string $path, bool $isDir): string
     {
         if (str_starts_with($path, "/")) {
             $path = substr($path, 1);
         }
 
-        if (!str_ends_with($path, "/")) {
+        if (!str_ends_with($path, "/") && $isDir) {
             $path .= '/';
         }
 
-        return $path;
+        return preg_replace("/\/+/", '/', $path);
     }
 }

@@ -1,10 +1,3 @@
-## Advanced features for Laravel framework
-
-### Документация
-
-Документацию к пакету вы можете найти [здесь](https://advanced-laravel.readthedocs.io/).
-
-### Установка:
 Скачайте исходных код с помощью команды:
 
 ```bash
