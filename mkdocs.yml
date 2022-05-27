@@ -1,0 +1,12 @@
+site_name: Advanced Laravel
+nav:
+  - "Главная": index.md
+  - "Установка": installation.md
+  - "Функционал":
+      - "Console": features/console.md
+      - "Filesystem": features/filesystem.md
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - php
