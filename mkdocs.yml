@@ -5,6 +5,7 @@ nav:
   - "Функционал":
       - "Console": features/console.md
       - "Filesystem": features/filesystem.md
+      - "Model": features/model.md
 theme:
   name: readthedocs
   highlightjs: true
